@@ -30,7 +30,7 @@ export class ColaboradorController {
     @Get("/nome/:nome")
     @HttpCode(HttpStatus.OK)
     findAllByNome(@Param("nome")nome: string): Promise<Colaborador[]>{
-        return this.colaboradorService.findAllByCargo(nome)
+        return this.colaboradorService.findAllByNome(nome)
     }
 
     @Post()
